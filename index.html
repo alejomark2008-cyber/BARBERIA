@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Barbería - Prototipo web creado por DigiAR Rv.">
+  <title>BARBERÍA | Corte · Estilo · Actitud</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <a href="#inicio" class="logo-wrap">
+      <img src="assets/logo-barberia.png" alt="Logo Barbería">
+    </a>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="desktop-nav">
+      <a class="active" href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#barberos">Barberos</a>
+      <a href="#menu">Menú</a>
+      <a href="#ubicaciones">Ubicaciones</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <a class="reserve-btn" href="#contacto">Reservar cita</a>
+  </header>
+
+  <aside class="side-menu" id="sideMenu">
+    <div class="side-top">
+      <img src="assets/logo-barberia.png" alt="Barbería">
+      <button id="closeBtn" aria-label="Cerrar">×</button>
+    </div>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#barberos">Nuestros barberos</a>
+      <a href="#menu">Menú y horarios</a>
+      <a href="#ubicaciones">Sedes y ubicación</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="side-note">PROTOTIPO · DIGIAR RV</div>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <span class="eyebrow">TU ESTILO, NUESTRA PASIÓN</span>
+        <h1>BARBERÍA</h1>
+        <div class="gold-line-text">CORTE <i>•</i> ESTILO <i>•</i> ACTITUD</div>
+        <p>
+          No solo cortamos cabello. Creamos estilos, cuidamos cada detalle
+          y hacemos que cada visita sea una experiencia diferente.
+        </p>
+        <div class="hero-actions">
+          <a href="#servicios" class="gold-btn">Ver servicios <span>→</span></a>
+          <a href="#barberos" class="ghost-btn">Conocer barberos</a>
+        </div>
+      </div>
+      <div class="hero-chair" aria-hidden="true">
+        <div class="lamp"></div>
+        <div class="chair-back"></div>
+        <div class="chair-seat"></div>
+        <div class="chair-arm left"></div>
+        <div class="chair-arm right"></div>
+        <div class="mirror"></div>
+      </div>
+    </section>
+
+    <section class="section" id="servicios">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">SERVICIOS</span>
+          <h2>Tipos de cortes</h2>
+          <p>Encuentra el estilo que va contigo.</p>
+        </div>
+        <a href="#menu" class="text-link">Ver todos los servicios →</a>
+      </div>
+
+      <div class="service-grid">
+        <button class="service-card" data-title="Corte clásico" data-desc="Un corte limpio y versátil, pensado para un estilo elegante y fácil de mantener." data-price="$25.000">
+          <div class="service-art art-1"></div><strong>Corte clásico</strong><span>Desde $25.000</span>
+        </button>
+        <button class="service-card" data-title="Degradado" data-desc="Degradado personalizado según el estilo y la forma que quieras llevar." data-price="$30.000">
+          <div class="service-art art-2"></div><strong>Degradado</strong><span>Desde $30.000</span>
+        </button>
+        <button class="service-card" data-title="Skin fade" data-desc="Acabado definido y progresivo para un look moderno y limpio." data-price="$32.000">
+          <div class="service-art art-3"></div><strong>Skin fade</strong><span>Desde $32.000</span>
+        </button>
+        <button class="service-card" data-title="Corte americano" data-desc="Estilo con personalidad, textura y volumen." data-price="$32.000">
+          <div class="service-art art-4"></div><strong>Corte americano</strong><span>Desde $32.000</span>
+        </button>
+        <button class="service-card" data-title="Diseño" data-desc="Diseños y líneas personalizados para darle un toque diferente a tu corte." data-price="$38.000">
+          <div class="service-art art-5"></div><strong>Diseño</strong><span>Desde $38.000</span>
+        </button>
+        <button class="service-card" data-title="Barba" data-desc="Perfilado y arreglo de barba con acabado profesional." data-price="$20.000">
+          <div class="service-art art-6"></div><strong>Barba</strong><span>Desde $20.000</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="section barbers-section" id="barberos">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">NUESTRO EQUIPO</span>
+          <h2>Nuestros barberos</h2>
+          <p>Cada uno con un estilo, una técnica y una pasión.</p>
+        </div>
+        <span class="text-link">Selecciona uno para conocerlo →</span>
+      </div>
+
+      <div class="barber-grid">
+        <button class="barber-card color-blue" data-name="Mateo R." data-role="Barbero senior" data-rating="4.9" data-reviews="120" data-bio="Especialista en degradados y cortes clásicos. Le gusta trabajar estilos personalizados y cuidar cada detalle del acabado.">
+          <div class="avatar"><span>MR</span></div><strong>Mateo R.</strong><small>BARBERO SENIOR</small><div class="stars">★★★★★ <b>4.9</b></div>
+        </button>
+        <button class="barber-card color-red" data-name="Santiago G." data-role="Barbero" data-rating="4.8" data-reviews="98" data-bio="Especialista en fades, líneas y estilos modernos.">
+          <div class="avatar"><span>SG</span></div><strong>Santiago G.</strong><small>BARBERO</small><div class="stars">★★★★★ <b>4.8</b></div>
+        </button>
+        <button class="barber-card color-yellow" data-name="Daniel L." data-role="Barbero" data-rating="4.7" data-reviews="87" data-bio="Se enfoca en cortes con textura, volumen y estilos actuales.">
+          <div class="avatar"><span>DL</span></div><strong>Daniel L.</strong><small>BARBERO</small><div class="stars">★★★★★ <b>4.7</b></div>
+        </button>
+        <button class="barber-card color-black" data-name="Juan P." data-role="Barbero senior" data-rating="4.9" data-reviews="110" data-bio="Experiencia en barbería clásica, barba y acabados detallados.">
+          <div class="avatar"><span>JP</span></div><strong>Juan P.</strong><small>BARBERO SENIOR</small><div class="stars">★★★★★ <b>4.9</b></div>
+        </button>
+        <button class="barber-card color-purple" data-name="Esteban M." data-role="Barbero" data-rating="4.8" data-reviews="102" data-bio="Especialista en diseños, líneas y estilos personalizados.">
+          <div class="avatar"><span>EM</span></div><strong>Esteban M.</strong><small>BARBERO</small><div class="stars">★★★★★ <b>4.8</b></div>
+        </button>
+        <button class="barber-card color-green" data-name="Andrés T." data-role="Barbero" data-rating="4.7" data-reviews="76" data-bio="Le apasionan los cortes modernos y los cambios de estilo.">
+          <div class="avatar"><span>AT</span></div><strong>Andrés T.</strong><small>BARBERO</small><div class="stars">★★★★★ <b>4.7</b></div>
+        </button>
+        <button class="barber-card color-orange" data-name="Valen C." data-role="Barbero" data-rating="4.9" data-reviews="105" data-bio="Especialista en cortes limpios y atención personalizada.">
+          <div class="avatar"><span>VC</span></div><strong>Valen C.</strong><small>BARBERO</small><div class="stars">★★★★★ <b>4.9</b></div>
+        </button>
+        <button class="barber-card color-cyan" data-name="Felipe R." data-role="Barbero" data-rating="4.8" data-reviews="89" data-bio="Combina técnicas clásicas con tendencias modernas para crear estilos únicos.">
+          <div class="avatar"><span>FR</span></div><strong>Felipe R.</strong><small>BARBERO</small><div class="stars">★★★★★ <b>4.8</b></div>
+        </button>
+      </div>
+    </section>
+
+    <section class="split-section">
+      <div class="why">
+        <span class="eyebrow">LA EXPERIENCIA</span>
+        <h2>¿Por qué venir?</h2>
+        <div class="benefits">
+          <div><span>✂</span><strong>Barberos profesionales</strong></div>
+          <div><span>◇</span><strong>Productos de alta calidad</strong></div>
+          <div><span>✓</span><strong>Ambiente cómodo</strong></div>
+          <div><span>♛</span><strong>Atención personalizada</strong></div>
+        </div>
+      </div>
+      <div class="quote-panel">
+        <p>“El buen estilo también es una forma de actitud.”</p>
+        <span>BARBERÍA</span>
+      </div>
+    </section>
+
+    <section class="section menu-section" id="menu">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">MENÚ</span>
+          <h2>Servicios y horarios</h2>
+          <p>Todo lo que necesitas antes de visitarnos.</p>
+        </div>
+      </div>
+      <div class="menu-columns">
+        <div class="price-card">
+          <h3>Cortes</h3>
+          <div><span>Corte clásico</span><b>$25.000</b></div>
+          <div><span>Degradado</span><b>$30.000</b></div>
+          <div><span>Skin fade</span><b>$32.000</b></div>
+          <div><span>Corte + barba</span><b>$45.000</b></div>
+          <div><span>Diseño personalizado</span><b>$38.000</b></div>
+        </div>
+        <div class="hours-card">
+          <h3>Horarios</h3>
+          <div><span>Lunes – Viernes</span><b>8:00 a. m. – 8:00 p. m.</b></div>
+          <div><span>Sábados</span><b>9:00 a. m. – 7:00 p. m.</b></div>
+          <div><span>Domingos</span><b>10:00 a. m. – 4:00 p. m.</b></div>
+          <p>Horario ficticio para este prototipo.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="location-section" id="ubicaciones">
+      <div class="location-copy">
+        <span class="eyebrow">ENCUÉNTRANOS</span>
+        <h2>Sedes y cómo encontrarnos</h2>
+        <p>Visítanos en cualquiera de nuestras sedes ficticias o contáctanos para reservar.</p>
+        <div class="location-list">
+          <div><strong>Sede Principal · Bogotá</strong><span>Cra. 45 # 12 - 34</span></div>
+          <div><strong>Sede Norte · Bogotá</strong><span>Av. 19 # 85 - 21</span></div>
+          <div><strong>Sede Sur · Bogotá</strong><span>Cl. 66 Sur # 18 - 45</span></div>
+        </div>
+      </div>
+      <div class="map-placeholder"><div class="map-grid"></div><div class="pin">●</div><span>MAPA / UBICACIÓN</span></div>
+    </section>
+
+    <section class="contact-section" id="contacto">
+      <div>
+        <span class="eyebrow">RESERVA</span>
+        <h2>Agenda tu próxima cita.</h2>
+        <p>Datos ficticios para el prototipo de portafolio.</p>
+      </div>
+      <div class="contact-data">
+        <a href="tel:+573001234567">☎ +57 300 123 4567</a>
+        <a href="https://instagram.com/barberia_estilo" target="_blank">@barberia_estilo</a>
+        <a href="mailto:hola@barberiaficticia.com">✉ hola@barberiaficticia.com</a>
+      </div>
+      <a class="gold-btn big" href="https://wa.me/573001234567" target="_blank">Reservar por WhatsApp <span>→</span></a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand"><img src="assets/logo-barberia.png" alt="Barbería"><span>PROTOTIPO CREADO POR DIGIAR RV</span></div>
+    <div>© 2026 Barbería · Todos los derechos reservados.</div>
+  </footer>
+
+  <div class="modal" id="modal">
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose">×</button>
+      <div class="modal-avatar" id="modalAvatar">MR</div>
+      <span class="eyebrow" id="modalRole">BARBERO</span>
+      <h2 id="modalName">Mateo R.</h2>
+      <div class="modal-rating">★★★★★ <b id="modalRating">4.9</b> · <span id="modalReviews">120</span> reseñas</div>
+      <p id="modalBio"></p>
+      <a href="#contacto" class="gold-btn" id="modalBook">Reservar con este barbero →</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
